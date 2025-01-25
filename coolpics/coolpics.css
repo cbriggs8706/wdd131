@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
+
+:root {
+	--primary-color: #52489c;
+	--secondary-color: #59c3c3;
+	--accent-color: #f45b69;
+	--text-dark: #333;
+	--text-light: #ebebeb;
+	--primary-font: Arial, Helvetica, sans-serif;
+	--secondary-font: Mooli, sans-serif;
+}
+
+body {
+	font-family: var(--primary-font);
+	margin: 0;
+	padding: 0;
+	background-color: #f5f5f5;
+	color: var(--text-dark);
+}
+
+header {
+	background-color: var(--primary-color);
+	color: var(--text-light);
+	text-align: center;
+	padding: 10px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+
+header h1 {
+	font-family: var(--secondary-font);
+	font-size: 3em;
+	margin: 0;
+}
+
+nav {
+	display: flex;
+	gap: 15px;
+	flex-direction: column;
+	align-items: center;
+}
+
+nav a {
+	color: var(--text-light);
+	text-decoration: underline;
+	font-size: 1.1em;
+}
+
+button.menu {
+	background: none;
+	border: none;
+	color: var(--text-light);
+	font-size: 1.5em;
+	cursor: pointer;
+	font-family: var(--primary-font);
+}
+
+button.menu:focus {
+	outline: none;
+}
+
+main {
+	text-align: center;
+	padding: 20px;
+}
+
+main h2 {
+	font-family: var(--secondary-font);
+	margin-bottom: 20px;
+}
+
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 20px;
+	padding: 20px;
+	justify-content: center;
+	margin: auto;
+}
+
+.gallery img {
+	width: 250px;
+	height: 250px;
+	object-fit: cover;
+	border-color: white;
+	border-width: 10px;
+	border-style: solid;
+	box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.5);
+	transition: transform 0.3s, box-shadow 0.3s;
+}
+
+footer {
+	background-color: var(--primary-color);
+	color: var(--text-light);
+	text-align: center;
+	padding: 10px 0;
+	font-size: 0.9em;
+}
+
+@media screen and (min-width: 700px) {
+	.gallery {
+		grid-template-columns: 1fr 1fr;
+	}
+	nav {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	.gallery {
+		grid-template-columns: repeat(3, 1fr);
+		max-width: fit-content;
+	}
+
+	nav {
+		display: flex;
+		flex-direction: row;
+		width: 75%;
+		justify-content: space-evenly;
+	}
+
+	button.menu {
+		display: none;
+	}
+}
