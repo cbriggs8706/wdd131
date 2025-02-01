@@ -1,3 +1,46 @@
+const menuButton = document.querySelector('.menu')
+const navLinks = document.querySelectorAll('nav a')
+
+menuButton.addEventListener('click', () => {
+	navLinks.forEach((link) => {
+		link.classList.toggle('hide')
+	})
+})
+
+const mediaQuery = window.matchMedia('(min-width: 700px)')
+
+function handleMediaQueryChange() {
+	if (mediaQuery.matches) {
+		navLinks.forEach((link) => {
+			link.classList.remove('hide')
+		})
+		menuButton.style.display = 'none'
+	} else {
+		menuButton.style.display = 'block'
+	}
+}
+
+mediaQuery.addEventListener('change', handleMediaQueryChange)
+handleMediaQueryChange()
+
+function handleResize() {
+	if (window.innerWidth > 1000) {
+		navLinks.forEach((link) => {
+			link.classList.remove('hide')
+		})
+		menuButton.style.display = 'none'
+	} else {
+		navLinks.forEach((link) => {
+			link.classList.add('hide')
+		})
+		menuButton.style.display = 'block'
+	}
+}
+
+window.addEventListener('resize', handleResize)
+
+handleResize()
+
 function viewHandler(event) {
 	if (event.target.tagName === 'IMG') {
 		const existingViewer = document.getElementById('imageViewer')
