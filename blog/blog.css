@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+:root {
+	--gold-color: #efc69b;
+	--red-color: #af1b3f;
+	--dark-color: #473144;
+	/* --text-dark: #333;
+	--text-light: #ebebeb; */
+	--body-font: Arial, Helvetica, sans-serif;
+	--headline-font: Lora, Impact, serif;
+}
+
+h1,
+h2,
+h3 {
+	font-family: var(--headline-font);
+}
+
+h1 {
+	text-align: center;
+	font-size: 3em;
+	color: var(--dark-color);
+	padding: 20px 0;
+}
+
+nav ul {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	justify-content: flex-end;
+	gap: 20px;
+	grid-column: 3;
+}
+
+nav {
+	border-top: 2px solid var(--gold-color);
+	border-bottom: 2px solid var(--gold-color);
+	max-width: 900px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 20px 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	align-items: center;
+}
+
+nav a {
+	font-size: 1.2em;
+	text-decoration: none;
+	color: var(--red-color);
+	font-family: var(--body-font);
+	font-weight: 500;
+}
+
+.skiptocontent a {
+	position: absolute;
+	top: -40px;
+	left: 0;
+	background: var(--red-color, #af1b3f);
+	color: white;
+	padding: 10px;
+	text-decoration: none;
+	font-weight: bold;
+	z-index: 100;
+	transition: top 0.3s ease-in-out;
+}
+
+.skiptocontent a:focus {
+	top: 10px;
+	outline: 2px solid white;
+}
+
+main {
+	max-width: 1200px;
+	margin: 20px auto;
+}
+
+footer {
+	text-align: center;
+	padding: 10px;
+	background-color: var(--dark-color);
+	color: white;
+}
