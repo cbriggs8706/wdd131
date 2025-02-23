@@ -1,0 +1,140 @@
+body {
+	text-transform: uppercase;
+	font-size: 20px;
+	font-family: 'Courier', sans-serif;
+	font-weight: 100;
+}
+
+footer,
+header {
+	text-align: center;
+}
+
+#form-container {
+	margin: auto;
+	width: 600px;
+	height: 400px;
+	display: grid;
+	grid-template-columns: 1fr 3fr 1fr;
+	grid-template-rows: 1fr 10fr 1fr 2fr;
+	gap: 20px;
+}
+
+#card-front,
+#card-back {
+	background-color: #d2d2d2;
+	border-radius: 6px;
+	box-sizing: border-box;
+	color: black;
+}
+
+#card-front {
+	padding: 20px 30px;
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 3;
+	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	gap: 15px;
+}
+
+#card-back {
+	padding: 20px 0;
+	grid-column-start: 2;
+	grid-column-end: 4;
+	grid-row-start: 2;
+	grid-row-end: 4;
+	z-index: -2;
+	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	grid-template-rows: 1fr 1fr;
+}
+
+#amount {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	margin: auto 0;
+}
+
+#card-image {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	margin: auto 0 auto auto;
+}
+
+#cardnumber-container {
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+#card-month,
+#card-year {
+	width: 45%;
+}
+
+#card-stripe {
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	height: 55px;
+	background-color: #727272;
+}
+
+#cvc-container {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	margin: auto auto 0 0;
+}
+
+#card-cvc {
+	width: 75%;
+}
+
+input {
+	width: 100%;
+	border: none;
+	outline: none;
+	background-color: white;
+	height: 35px;
+	color: #727272;
+	box-sizing: border-box;
+	border-radius: 2px;
+	padding-left: 8px;
+	font-family: 'Helvetica-Light', sans-serif;
+	font-size: 20px;
+}
+
+#card-btn {
+	background-color: #e6e6e6;
+	color: #727272;
+	border-radius: 8px;
+	border: black;
+	border-style: solid;
+	cursor: pointer;
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 4;
+	grid-row-end: 5;
+}
+
+#card-btn:hover {
+	background-color: #d2d2d2;
+}
