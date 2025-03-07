@@ -57,7 +57,7 @@ header {
 	margin-bottom: 20px;
 }
 
-.search-input {
+#search-input {
 	padding: 8px;
 	border: 1px solid #ccc;
 	border-radius: 5px 0 0 5px;
@@ -65,14 +65,14 @@ header {
 	width: 100%;
 }
 
-.search-button {
+#search-button {
 	border: 1px solid #ccc;
 	border-radius: 0 5px 5px 0;
 	background-color: white;
 	cursor: pointer;
 }
 
-.search-button svg {
+#search-button svg {
 	width: 30px;
 	height: 30px;
 	fill: var(--text-dark);
@@ -110,7 +110,7 @@ header {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	text-align: center;
+	text-align: left;
 	margin: 20px;
 	padding: 20px;
 	border: 1px solid #ccc;
