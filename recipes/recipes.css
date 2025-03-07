@@ -223,10 +223,6 @@ header {
 
 /* Desktop Styles */
 @media (min-width: 1024px) {
-	.recipe {
-		max-width: 900px;
-	}
-
 	.recipe-image-col {
 		width: 35%;
 	}
@@ -236,10 +232,6 @@ header {
 	}
 
 	.header-title img {
-		width: 70px;
-	}
-
-	.social img {
 		width: 70px;
 	}
 }
