@@ -1,20 +1,108 @@
+<!-- https://cbriggs8706.github.io/wdd131/  -->
+
 <!DOCTYPE html>
 <html lang="en">
-	<!-- https://cbriggs8706.github.io/wdd131/ -->
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="description" content="Portfolio for Cameron's WDD 131 Class" />
-		<meta name="author" content="Cameron Briggs" />
-		<title>Cameron Briggs: WDD 131 porfolio</title>
+		<title>About Me</title>
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<a href="mission/index.html">Mission Statement</a>
-		<a href="coolpics/index.html">Coolpics</a>
-		<a href="blog/index.html">Blog</a>
-		<a href="creditcard/index.html">Credit Card</a>
-		<a href="register/index.html">Register</a>
-		<a href="recipes/index.html">Recipes</a>
+		<header>
+			<nav class="navbar">
+				<div class="nav-brand"><img src="/images/cameronBriggsLogo.png" alt="logo"></div>
+				<button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+				<ul class="nav-links">
+					<li><a href="#fun-facts">Fun Facts</a></li>
+					<li><a href="#hobbies">Hobbies</a></li>
+					<li><a href="#quiz">Quiz</a></li>
+					<li><a href="#timeline">Timeline</a></li>
+					<li><a href="#day-builder">Build Your Day</a></li>
+					<li>
+						<button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+							<span id="theme-icon">🌙</span>
+						</button>
+						
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<section id="fun-facts">
+			<h2>Random Fun Fact</h2>
+			<div id="fact-card" class="fact-card">
+				<p id="fact-display"></p>
+				<button id="new-fact">Show New Fact</button>
+			</div>
+		</section>
+
+		<section id="hobbies">
+			<h2>My Hobbies</h2>
+			<label for="mood-filter">Filter by Mood:</label>
+			<select id="mood-filter">
+				<option value="all">All</option>
+				<option value="relaxing">Relaxing</option>
+				<option value="active">Active</option>
+				<option value="creative">Creative</option>
+			</select>
+			<ul id="hobby-list"></ul>
+		</section>
+
+		<section id="quiz">
+			<h2>What Kind of Developer Are You?</h2>
+			<div id="quiz-container"></div>
+			<div class="quiz-submit-wrapper">
+				<button id="submit-quiz">Submit Quiz</button>
+			</div>
+			<div id="quiz-result" class="quiz-result hidden"></div>
+		</section>
+	
+
+			<section id="timeline">
+				<h2>My Timeline</h2>
+			
+				<div class="timeline-filters">
+					<label for="year-filter">Year:</label>
+					<select id="year-filter"></select>
+			
+					<label for="category-filter">Category:</label>
+					<select id="category-filter">
+						<option value="all">All</option>
+						<option value="school">School</option>
+						<option value="work">Work</option>
+						<option value="personal">Personal</option>
+					</select>
+				</div>
+			
+				<div id="timeline-list" class="timeline-list"></div>
+			</section>
+			
+
+			
+		</section>
+
+		<section id="day-builder">
+			<h2>Build Your Day with Me</h2>
+		
+			<form id="day-form">
+				<label for="morning">Morning:</label>
+				<select id="morning" required></select>
+		
+				<label for="afternoon">Afternoon:</label>
+				<select id="afternoon" required></select>
+		
+				<label for="evening">Evening:</label>
+				<select id="evening" required></select>
+		
+				<button type="submit">Build My Day</button>
+			</form>
+		
+			<div id="day-summary" class="day-summary hidden"></div>
+		</section>
+		
+
+		<script type="module" src="js/main.js"></script>
+
 	</body>
 </html>
