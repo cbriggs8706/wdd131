@@ -35,16 +35,23 @@ header {
 }
 
 .nav-brand {
-	font-size: 2rem;
+	font-size: 1rem;
 	font-weight: bold;
 	letter-spacing: 1px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 20px;
+	line-height: 2em;
+	text-decoration: none;
+	color: inherit;
 }
 
 .nav-brand img {
 	height: 48px;
 	max-height: 48px;
 	width: auto;
-	max-width: 200px; /* prevents really wide logos */
+	max-width: 200px;
 	object-fit: contain;
 	display: block;
 }
@@ -142,7 +149,7 @@ textarea:focus {
 
 /* Sections */
 section {
-	padding: 4rem 1.5rem;
+	padding: 2rem 1.5rem;
 	max-width: 960px;
 	margin: auto;
 }
@@ -212,7 +219,7 @@ ul#timeline-list li:hover {
 }
 
 #hobby-list li {
-	flex: 1 1 calc(33.333% - 1rem);
+	flex: 1 1 calc(18% - 1rem);
 	text-align: center;
 	font-weight: bold;
 }
@@ -352,22 +359,6 @@ ul#timeline-list li:hover {
 
 .timeline-event a:hover {
 	text-decoration: underline;
-}
-
-/* Build Your Day */
-.day-summary {
-	margin-top: 2rem;
-	background: var(--gradient);
-	color: white;
-	padding: 2rem;
-	border-radius: 16px;
-	text-align: center;
-	font-size: 1.2rem;
-	font-weight: bold;
-	box-shadow: 0 4px 12px rgba(0, 122, 204, 0.25);
-	max-width: 600px;
-	margin-left: auto;
-	margin-right: auto;
 }
 
 .hidden {

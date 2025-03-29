@@ -1,34 +1,49 @@
-<!-- https://cbriggs8706.github.io/wdd131/  -->
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>About Me</title>
+		<title>Home - Cameron Briggs</title>
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
 		<header>
 			<nav class="navbar">
-				<div class="nav-brand"><img src="/images/cameronBriggsLogo.png" alt="logo"></div>
+				<a href="index.html" class="nav-brand">
+					<img src="/images/cameronBriggsLogo.png" alt="logo" />
+					<h1>Cameron Briggs</h1>
+				</a>
 				<button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
 				<ul class="nav-links">
 					<li><a href="#fun-facts">Fun Facts</a></li>
-					<li><a href="#hobbies">Hobbies</a></li>
-					<li><a href="#quiz">Quiz</a></li>
 					<li><a href="#timeline">Timeline</a></li>
-					<li><a href="#day-builder">Build Your Day</a></li>
+					<li><a href="about.html">About Me</a></li>
 					<li>
-						<button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+						<button
+							id="theme-toggle"
+							class="theme-toggle"
+							aria-label="Toggle dark mode"
+						>
 							<span id="theme-icon">🌙</span>
 						</button>
-						
 					</li>
 				</ul>
 			</nav>
 		</header>
-
+		<section id="intro">
+			<h2>Hi, I'm Cameron!</h2>
+			<p>
+				Welcome! I'm Cameron Briggs—a genealogist by heart, coder by trade,
+				graphic designer by passion, language enthusiast by curiosity, teacher
+				by vocation, and homesteader by lifestyle. Whether I'm uncovering family
+				histories, developing intuitive web applications, crafting visual
+				stories, exploring new languages, inspiring learners, or cultivating my
+				own little slice of heaven, I approach every project with creativity,
+				dedication, and a healthy dose of fun. Dive in to discover how my
+				diverse passions come together to create meaningful, engaging
+				experiences!
+			</p>
+		</section>
 		<section id="fun-facts">
 			<h2>Random Fun Fact</h2>
 			<div id="fact-card" class="fact-card">
@@ -37,72 +52,30 @@
 			</div>
 		</section>
 
-		<section id="hobbies">
-			<h2>My Hobbies</h2>
-			<label for="mood-filter">Filter by Mood:</label>
-			<select id="mood-filter">
-				<option value="all">All</option>
-				<option value="relaxing">Relaxing</option>
-				<option value="active">Active</option>
-				<option value="creative">Creative</option>
-			</select>
-			<ul id="hobby-list"></ul>
-		</section>
+		<section id="timeline">
+			<h2>My Timeline</h2>
+			<div class="timeline-filters">
+				<label for="year-filter">Year:</label>
+				<select id="year-filter"></select>
 
-		<section id="quiz">
-			<h2>What Kind of Developer Are You?</h2>
-			<div id="quiz-container"></div>
-			<div class="quiz-submit-wrapper">
-				<button id="submit-quiz">Submit Quiz</button>
+				<label for="category-filter">Category:</label>
+				<select id="category-filter">
+					<option value="all">All</option>
+					<option value="school">School</option>
+					<option value="work">Work</option>
+					<option value="personal">Personal</option>
+					<option value="religion">Religion</option>
+				</select>
 			</div>
-			<div id="quiz-result" class="quiz-result hidden"></div>
-		</section>
-	
-
-			<section id="timeline">
-				<h2>My Timeline</h2>
-			
-				<div class="timeline-filters">
-					<label for="year-filter">Year:</label>
-					<select id="year-filter"></select>
-			
-					<label for="category-filter">Category:</label>
-					<select id="category-filter">
-						<option value="all">All</option>
-						<option value="school">School</option>
-						<option value="work">Work</option>
-						<option value="personal">Personal</option>
-					</select>
-				</div>
-			
-				<div id="timeline-list" class="timeline-list"></div>
-			</section>
-			
-
-			
+			<div id="timeline-list" class="timeline-list"></div>
 		</section>
 
-		<section id="day-builder">
-			<h2>Build Your Day with Me</h2>
-		
-			<form id="day-form">
-				<label for="morning">Morning:</label>
-				<select id="morning" required></select>
-		
-				<label for="afternoon">Afternoon:</label>
-				<select id="afternoon" required></select>
-		
-				<label for="evening">Evening:</label>
-				<select id="evening" required></select>
-		
-				<button type="submit">Build My Day</button>
-			</form>
-		
-			<div id="day-summary" class="day-summary hidden"></div>
-		</section>
-		
-
-		<script type="module" src="js/main.js"></script>
-
+		<script type="module">
+			import { renderFunFact, renderTimeline } from './js/main.js'
+			document.addEventListener('DOMContentLoaded', () => {
+				renderFunFact()
+				renderTimeline()
+			})
+		</script>
 	</body>
 </html>

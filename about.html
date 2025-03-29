@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>About Me - Cameron Briggs</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header>
+			<nav class="navbar">
+				<a href="index.html" class="nav-brand">
+					<img src="/images/cameronBriggsLogo.png" alt="logo" />
+					<h1>Cameron Briggs</h1>
+				</a>
+				<button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+				<ul class="nav-links">
+					<li><a href="#hobbies">Hobbies</a></li>
+					<li><a href="#quiz">Quiz</a></li>
+					<li>
+						<button
+							id="theme-toggle"
+							class="theme-toggle"
+							aria-label="Toggle dark mode"
+						>
+							<span id="theme-icon">🌙</span>
+						</button>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<section id="hobbies">
+			<h2>My Hobbies</h2>
+			<label for="mood-filter">Filter by Mood:</label>
+			<select id="mood-filter">
+				<option value="all">All</option>
+				<option value="relaxing">Relaxing</option>
+				<option value="prepper">Prepper Skills</option>
+				<option value="creative">Creative</option>
+				<option value="learning">Learning</option>
+			</select>
+			<ul id="hobby-list"></ul>
+		</section>
+
+		<section id="quiz">
+			<h2>What Kind of Developer Are You?</h2>
+			<p>
+				A couple of years ago, I realized I had tons of creative ideas but
+				lacked the technical skills to bring them to life. I decided to go back
+				to school to learn web development, enabling my visions to finally come
+				to fruition. Along the way, I was surprised to discover there are
+				different kinds of developers, each with unique strengths and styles.
+				Curious about your own developer style? Take the quiz below and find out
+				which kind of developer you are!
+			</p>
+			<div id="quiz-container"></div>
+
+			<div class="quiz-submit-wrapper">
+				<button id="submit-quiz">Submit Quiz</button>
+			</div>
+			<div id="quiz-result" class="quiz-result hidden"></div>
+		</section>
+
+		<script type="module">
+			import { renderHobbies, renderQuiz } from './js/about.js'
+			document.addEventListener('DOMContentLoaded', () => {
+				renderHobbies()
+				renderQuiz()
+			})
+		</script>
+	</body>
+</html>
