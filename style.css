@@ -147,6 +147,23 @@ textarea:focus {
 	outline: none;
 }
 
+.intro-wrapper {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 2rem;
+	flex-wrap: wrap;
+}
+
+.headshot {
+	width: 160px;
+	height: 160px;
+	border-radius: 50%;
+	object-fit: cover;
+	box-shadow: var(--card-shadow);
+	margin: auto;
+}
+
 /* Sections */
 section {
 	padding: 2rem 1.5rem;
